@@ -1,0 +1,15 @@
+Toy photo credits
+=================
+
+These locally stored photographs are resized Wikimedia Commons thumbnails. The portraits, paintings, and other artwork in the photographs are not modified; each photo is bundled here for offline use. Source pages identify the exact files and license terms.
+
+- assets/toy-hot-wheels.jpg — “Hot Wheels Custom Camaro.jpg”, Curtis Palmer; CC BY 2.0. https://commons.wikimedia.org/wiki/File:Hot_Wheels_Custom_Camaro.jpg · License: https://creativecommons.org/licenses/by/2.0/
+- assets/toy-lego-bricks.jpg — “Lego Color Bricks.jpg”, Alan Chia; CC BY-SA 2.0. https://commons.wikimedia.org/wiki/File:Lego_Color_Bricks.jpg · License: https://creativecommons.org/licenses/by-sa/2.0/
+- assets/toy-action-figures.jpg — “Soldier action figures.jpg”, puuikibeach; CC BY 2.0. https://commons.wikimedia.org/wiki/File:Soldier_action_figures.jpg · License: https://creativecommons.org/licenses/by/2.0/
+- assets/toy-star-wars-figure.jpg — crop of “Han Solo Figure (7865109398).jpg”, Steven Miller; CC BY 2.0. https://commons.wikimedia.org/wiki/File:Han_Solo_Figure_(7865109398).jpg · License: https://creativecommons.org/licenses/by/2.0/ · Crop made for the action-figure shelf image.
+- assets/toy-plush-bears.jpg — “Teddy bear toys collection.jpg”, Cooper David / U.S. Fish and Wildlife Service; public domain. https://commons.wikimedia.org/wiki/File:Teddy_bear_toys_collection.jpg
+- assets/toy-train.jpg — “Yellow toy train (Unsplash).jpg”, Dan Paul; CC0. https://commons.wikimedia.org/wiki/File:Yellow_toy_train_(Unsplash).jpg · License: https://creativecommons.org/publicdomain/zero/1.0/
+- assets/toy-balls.jpg — “Toy balls with different Colors.jpg”, Ramesh NG; CC BY-SA 2.0. https://commons.wikimedia.org/wiki/File:Toy_balls_with_different_Colors.jpg · License: https://creativecommons.org/licenses/by-sa/2.0/
+- assets/toy-puzzle.jpg — “Jigsaw puzzle in progress.jpg”, Balise42; CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Jigsaw_puzzle_in_progress.jpg · License: https://creativecommons.org/licenses/by-sa/4.0/
+- assets/toy-board-game.jpg — “Board game pieces.jpg”, Mshuang2; CC0. https://commons.wikimedia.org/wiki/File:Board_game_pieces.jpg · License: https://creativecommons.org/publicdomain/zero/1.0/
+- assets/toy-doll.jpg — “Sindy fashion doll and accessories.jpg”, Clem Rutter; CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Sindy_fashion_doll_and_accessories.jpg · License: https://creativecommons.org/licenses/by-sa/3.0/

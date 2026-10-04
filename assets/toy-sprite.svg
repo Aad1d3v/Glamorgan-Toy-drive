@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <view id="car" viewBox="0 0 200 200"/>
+  <view id="bricks" viewBox="200 0 200 200"/>
+  <view id="teddy" viewBox="400 0 200 200"/>
+  <view id="rocket" viewBox="600 0 200 200"/>
+  <view id="doll" viewBox="0 200 200 200"/>
+  <view id="ball" viewBox="200 200 200 200"/>
+  <view id="game" viewBox="400 200 200 200"/>
+  <view id="puzzle" viewBox="600 200 200 200"/>
+  <defs>
+    <linearGradient id="red" x2="0" y2="1"><stop stop-color="#ff7b83"/><stop offset="1" stop-color="#df3445"/></linearGradient>
+    <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#79d0ff"/><stop offset="1" stop-color="#3289e2"/></linearGradient>
+    <linearGradient id="yellow" x2="0" y2="1"><stop stop-color="#ffe77b"/><stop offset="1" stop-color="#f3a91e"/></linearGradient>
+    <linearGradient id="green" x2="0" y2="1"><stop stop-color="#94ed8d"/><stop offset="1" stop-color="#3fb46b"/></linearGradient>
+    <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#c3a0ff"/><stop offset="1" stop-color="#7952d8"/></linearGradient>
+    <linearGradient id="pink" x2="0" y2="1"><stop stop-color="#ffa3cf"/><stop offset="1" stop-color="#e94e92"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="9" stdDeviation="6" flood-color="#30213f" flood-opacity=".22"/></filter>
+  </defs>
+  <!-- toy car -->
+  <g transform="translate(0 0)" filter="url(#shadow)" stroke="#332c49" stroke-width="7" stroke-linejoin="round">
+    <path d="M34 112 48 76q5-13 19-13h63q14 0 23 14l21 35 8 8v36H26v-31q0-10 8-13Z" fill="url(#red)"/>
+    <path d="m62 77-11 31h47V69H69q-5 0-7 8Zm47-8v39h39l-18-31q-3-8-11-8Z" fill="#baf0ff" stroke-width="5"/>
+    <path d="M30 119h145" fill="none" stroke="#ffcf4c" stroke-width="9"/>
+    <circle cx="59" cy="151" r="19" fill="#39334b"/><circle cx="59" cy="151" r="8" fill="#fff3d0" stroke="none"/>
+    <circle cx="148" cy="151" r="19" fill="#39334b"/><circle cx="148" cy="151" r="8" fill="#fff3d0" stroke="none"/>
+    <path d="M29 126h15m121 0h13" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- building bricks -->
+  <g transform="translate(200 0)" filter="url(#shadow)" stroke="#453759" stroke-width="6" stroke-linejoin="round">
+    <rect x="32" y="93" width="138" height="64" rx="12" fill="url(#blue)"/>
+    <rect x="42" y="58" width="65" height="51" rx="10" fill="url(#yellow)"/>
+    <rect x="102" y="73" width="61" height="42" rx="10" fill="url(#green)"/>
+    <path d="M53 91v-8m23 8v-8m40 10v-8m24 8v-8m-91 57v-18m43 18v-18m45 18v-18" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+    <circle cx="69" cy="57" r="10" fill="#ffeaa0" stroke="none"/><circle cx="132" cy="72" r="9" fill="#c8ffd0" stroke="none"/>
+  </g>
+  <!-- teddy bear -->
+  <g transform="translate(400 0)" filter="url(#shadow)" stroke="#80533f" stroke-width="6" stroke-linejoin="round">
+    <circle cx="63" cy="59" r="23" fill="#c98650"/><circle cx="137" cy="59" r="23" fill="#c98650"/>
+    <circle cx="63" cy="59" r="10" fill="#f5c79a" stroke="none"/><circle cx="137" cy="59" r="10" fill="#f5c79a" stroke="none"/>
+    <path d="M54 91q0-32 46-32t46 32v31q0 38-46 38t-46-38Z" fill="#d9955e"/>
+    <ellipse cx="100" cy="121" rx="27" ry="22" fill="#f5c79a" stroke="none"/>
+    <circle cx="82" cy="90" r="5" fill="#352b3e" stroke="none"/><circle cx="118" cy="90" r="5" fill="#352b3e" stroke="none"/>
+    <path d="m93 101 7 5 7-5q-1 12-7 12t-7-12Z" fill="#81423f" stroke="none"/>
+    <path d="M57 129q-29 0-25 24 3 13 28 7m80-31q29 0 25 24-3 13-28 7" fill="#d9955e"/>
+    <path d="M75 152q-2 18 17 18h16q19 0 17-18" fill="#c98650"/>
+    <path d="M96 74q4 12 8 0" fill="none" stroke="#fff1d8" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- toy rocket / action figure -->
+  <g transform="translate(600 0)" filter="url(#shadow)" stroke="#49345f" stroke-width="6" stroke-linejoin="round">
+    <path d="M99 37q42 25 41 80l-40 42-40-42Q58 62 99 37Z" fill="url(#purple)"/>
+    <path d="M61 96 33 125l25 10m80-39 28 29-25 10" fill="url(#red)"/>
+    <circle cx="100" cy="89" r="22" fill="#baf0ff"/>
+    <path d="m83 152-16 23 28-9m23-14 16 23-28-9" fill="url(#yellow)"/>
+    <path d="M90 174q10 17 20 0" fill="none" stroke="#ff6e75" stroke-width="9" stroke-linecap="round"/>
+    <path d="M99 47v20" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="100" cy="89" r="9" fill="#fff" stroke="none"/>
+  </g>
+  <!-- doll -->
+  <g transform="translate(0 200)" filter="url(#shadow)" stroke="#543b60" stroke-width="6" stroke-linejoin="round">
+    <path d="M100 38q37 0 37 39v5H63v-5q0-39 37-39Z" fill="#7a4a35"/>
+    <path d="M73 67q0-28 27-28t27 28v20H73Z" fill="#ffd5aa"/>
+    <circle cx="87" cy="72" r="4" fill="#352b3e" stroke="none"/><circle cx="113" cy="72" r="4" fill="#352b3e" stroke="none"/>
+    <path d="M91 84q9 8 18 0" fill="none" stroke="#db5a74" stroke-width="4" stroke-linecap="round"/>
+    <path d="M62 103q38-18 76 0l19 63H43Z" fill="url(#pink)"/>
+    <path d="m70 109-31 26m91-26 31 26" stroke="#ffd5aa" stroke-width="12" stroke-linecap="round"/>
+    <path d="M73 111 99 136l27-25" fill="none" stroke="#fff" stroke-width="6"/>
+    <circle cx="100" cy="105" r="8" fill="url(#yellow)"/>
+  </g>
+  <!-- ball -->
+  <g transform="translate(200 200)" filter="url(#shadow)" stroke="#38405f" stroke-width="6" stroke-linejoin="round">
+    <circle cx="100" cy="100" r="68" fill="url(#blue)"/>
+    <path d="m100 53 18 13-7 21H89l-7-21Zm-44 33 22 3 8 20-15 14-20-12Zm88 0-22 3-8 20 15 14 20-12ZM78 136l14-10h17l14 10-8 20H86Zm-3-70 13 21m48 0 13-21m-88 59 22-3m65 3-22-3m-37 14 9-30m29 30-9-30" fill="#fff" stroke="#38405f" stroke-width="4"/>
+    <circle cx="100" cy="100" r="68" fill="none" stroke="#fff" stroke-width="4" opacity=".6"/>
+  </g>
+  <!-- board game -->
+  <g transform="translate(400 200)" filter="url(#shadow)" stroke="#49345f" stroke-width="7" stroke-linejoin="round">
+    <path d="m100 36 70 37v79l-70 35-70-35V73Z" fill="url(#green)"/>
+    <path d="m30 73 70 37 70-37M100 110v77" fill="none" stroke="#fff" stroke-width="5" opacity=".8"/>
+    <path d="M48 84h30v22H48z" fill="url(#yellow)" stroke-width="4"/><path d="M116 123h32v22h-32z" fill="url(#pink)" stroke-width="4"/>
+    <circle cx="93" cy="83" r="9" fill="#fff" stroke="none"/><circle cx="107" cy="147" r="9" fill="#fff" stroke="none"/>
+    <path d="M74 65q0-18 16-18h22q16 0 16 18v7H74Z" fill="url(#red)" stroke-width="5"/>
+  </g>
+  <!-- puzzle pieces -->
+  <g transform="translate(600 200)" filter="url(#shadow)" stroke="#49345f" stroke-width="6" stroke-linejoin="round">
+    <path d="M35 58h43q-4-22 15-22 19 0 15 22h43v42q22-4 22 15 0 19-22 15v42h-43q4 22-15 22-19 0-15-22H35v-42q-22 4-22-15 0-19 22-15Z" fill="url(#yellow)"/>
+    <path d="M98 58v29m53 30h-29m-22 42v-27m-65-15h28" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+    <path d="M50 69h25v22H50zm68 49h22v23h-22z" fill="url(#blue)" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,3 @@
+# GitHub Pages / Render custom domain — set this to your domain, e.g. glamorgan-toy.org
+# Then `git add -A && git commit -m "add CNAME"` and push to main.
+# GitHub Pages serves this file automatically for custom domains.

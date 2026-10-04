@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<style>
+  body { margin:0; background:#fffdf6; font-family: Arial, sans-serif; }
+  .probe { display:flex; flex-wrap:wrap; gap:14px; padding:20px; justify-content:center; }
+  .probe .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; }
+  .probe .row label { font-size:12px; color:#777; }
+  .probe .row .out { font-size:13px; color:#222; min-width:160px; text-align:left; }
+  .probe .row .pick { font-family: monospace; font-size:12px; }
+  #root { position: fixed; top: 0; left: 0; right: 0; padding: 18px; box-sizing: border-box; }
+  .samp { position: absolute; visibility: hidden; }
+</style>
+</head>
+<body>
+<div id="root">
+  <div class="probe" id="probe">
+    <div class="row"><label>width</label><input id="width" type="range" min="320" max="1920" value="960" step="10"><span id="widthVal">960</span></div>
+    <div class="row"><label>font-size hero</label><input id="fsize" type="range" min="320" max="220" value="120" step="1"><span id="fsizeVal">2.2rem</span></div>
+    <div class="row"><label>stack H baseline</label><span id="baseH"></span></div>
+    <div class="row"><label>min/max H</label><span id="minmaxH"></span></div>
+    <div class="row"><label>overflowX</label><span id="ovfX"></span></div>
+    <div class="row"><label>grow count (comparing two rebuilds)</label><span id="growCnt"></span></div>
+    <div class="row"><label>block-sample</label><div id="blk"></div></div>
+  </div>
+  <div class="samp" id="samp">0123456789</div>
+</div>
+<script>
+(function(){
+  var root = document.getElementById('root');
+  var probe = document.getElementById('probe');
+  var widthIn = document.getElementById('width');
+  var widthVal = document.getElementById('widthVal');
+  var fsizeIn = document.getElementById('fsize');
+  var fsizeVal = document.getElementById('fsizeVal');
+  var baseH = document.getElementById('baseH');
+  var minmaxH = document.getElementById('minmaxH');
+  var ovvX = document.getElementById('ovfX');
+  var growCnt = document.getElementById('growCnt');
+  var blk = document.getElementById('blk');
+
+  var colors = ['#ff5964','#ff9f43','#ffca3a','#6bd97b','#4ea8ff','#9b7bff','#ff7eb6','#3fd4c4'];
+
+  function buildBlocks(el){
+    var text = el.textContent.trim();
+    var words = text.split(/\s+/);
+    el.setAttribute('aria-label', text);
+    el.textContent = '';
+    var ci = Math.floor(Math.random()*colors.length);
+    var letterIndex = 0;
+    words.forEach(function(w){
+      var wEl = document.createElement('span');
+      wEl.className = 'bl-word';
+      Array.prototype.forEach.call(w, function(ch){
+        var b = document.createElement('span');
+        b.className = 'bl';
+        b.setAttribute('aria-hidden','true');
+        b.style.setProperty('--bc', colors[ci % colors.length]);
+        b.style.setProperty('--tilt', (Math.random()*8-4).toFixed(1)+'deg');
+        b.style.setProperty('--letter-index', letterIndex++);
+        b.textContent = ch;
+        ci += 1 + Math.floor(Math.random()*2);
+        wEl.appendChild(b);
+      });
+      el.appendChild(wEl);
+      if(w !== words[words.length-1]){
+        var sp = document.createElement('span');
+        sp.className = 'bl-space';
+        sp.setAttribute('aria-hidden','true');
+        el.appendChild(sp);
+      }
+    });
+  }
+  var els = [];
+  ['xl','lg','sm'].forEach(function(size){
+    var el = document.createElement('div');
+    el.className = 'blk-samp';
+    el.style.fontSize = size==='xl' ? '2.2rem' : size==='lg' ? '1.2rem' : '1rem';
+    el.style.lineHeight = '1.5';
+    el.setAttribute('data-blocks', size);
+    el.textContent = size==='xl' ? 'GLAMORGAN TOY DRIVE' : 'WHY ARE WE DOING THIS?';
+    els.push(el);
+    root.appendChild(el);
+    buildBlocks(el);
+  });
+
+  var origH = null;
+  function measure(){
+    var w = parseInt(widthIn.value, 10);
+    var fs = parseInt(fsizeIn.value, 10)/100 + 'rem';
+    var fullW = w - 20;
+    if(isNaN(fs) || fs==='') fs = '2.2rem';
+    var style = document.createElement('style');
+    style.textContent = '.blk-samp{font-size:'+fs+';}';
+    root.appendChild(style);
+
+    probe.scrollIntoView({block:'nearest'});
+    var i=0;
+    function next(){
+      if(i>=els.length) return;
+      var el = els[i++];
+      el.style.fontSize = fs;
+      window.requestAnimationFrame(function(){
+        // force coinvent
+        var r = el.getBoundingClientRect();
+        measure2();
+      });
+    }
+    next();
+  }
+  function measure2(){
+    var h = els[0].getBoundingClientRect().height;
+    var raw = els[0].querySelector('.bl').getBoundingClientRect();
+    // reset to testing
+  }
+
+  widthIn.addEventListener('input', function(){
+    widthVal.textContent = widthIn.value;
+    measure();
+  });
+  fsizeIn.addEventListener('input', function(){
+    fsizeVal.textContent = fsizeIn.value/100 + 'rem';
+    measure();
+  });
+
+  function snapshot(){
+    var a = { w: widthIn.value, fs: fsizeIn.value, h: els[0].getBoundingClientRect().height,
+              ovx: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+              minH: els[0].getBoundingClientRect().height,
+              maxH: els[els.length-1].getBoundingClientRect().height };
+    return a;
+  }
+  var prev = null;
+  var cnt = 0;
+  (function tick(){
+    var s = snapshot();
+    if(prev && s.h !== prev.h) cnt++;
+    prev = s;
+    baseH.textContent = 'stack H: ' + (els[0].getBoundingClientRect().height).toFixed(1) + 'px';
+    minmaxH.textContent = 'min ' + els[0].getBoundingClientRect().height.toFixed(1) + ' / max ' + els[els.length-1].getBoundingClientRect().height.toFixed(1) + 'px';
+    ovvX.textContent = s.ovx + 'px';
+    growCnt.textContent = cnt;
+    blk.textContent = 'color ' + els[0].querySelector('.bl').style.borderColor + ' / bg ' + els[0].querySelector('.bl').style.background + ' / text ' + els[0].querySelector('.bl').style.color;
+    requestAnimationFrame(tick);
+  })();
+})();
+</script>
+</body>
+</html>

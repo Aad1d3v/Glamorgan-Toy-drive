@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glamorgan Toy Drive — Glamorgan School</title>
+<meta name="description" content="A student-run toy drive. Bring a toy to the donation bin in front of the Glamorgan School office and help fill the bin with smiles!">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='4' y='4' width='56' height='56' rx='14' fill='%23ff5964'/><rect x='4' y='4' width='56' height='20' rx='14' fill='rgba(255,255,255,.35)'/><text x='32' y='46' font-size='34' font-family='Arial' font-weight='900' text-anchor='middle' fill='white'>G</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <a class="brand" href="#s1">
+    <span class="brand-ico" aria-hidden="true"><span class="school-mark"></span></span>
+    <span class="brand-txt">GLAMORGAN SCHOOL</span>
+  </a>
+  <p class="topbar-sub">Toy donation bin located at the school</p>
+  <nav class="top-nav" aria-label="Sections">
+    <a href="#s2">Why</a>
+    <a href="#s3">How</a>
+    <a href="#s4">Toys</a>
+    <a href="#s5">Team</a>
+    <a href="#s6">Where</a>
+    <a href="#s7" class="top-nav-cta">Fill the bin</a>
+  </nav>
+</header>
+
+<!-- block-style progress bar -->
+<div class="progress" aria-hidden="true">
+  <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span>
+  <span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span>
+</div>
+
+<!-- ============ SLIDE DOTS ============ -->
+<nav class="dots" aria-label="Slide navigation">
+  <button data-target="s1" class="on" aria-current="true"><i></i><span>1 · Glamorgan Toy Drive</span></button>
+  <button data-target="s2"><i></i><span>2 · Why are we doing this?</span></button>
+  <button data-target="s3"><i></i><span>3 · How do I help?</span></button>
+  <button data-target="s4"><i></i><span>4 · What toys do we love?</span></button>
+  <button data-target="s5"><i></i><span>5 · Meet the team</span></button>
+  <button data-target="s6"><i></i><span>6 · Why, how &amp; where?</span></button>
+  <button data-target="s7"><i></i><span>7 · Let's fill the bin!</span></button>
+</nav>
+
+<!-- ============ SLIDE COUNTER ============ -->
+<div class="counter" aria-hidden="true">
+  <b id="counterNow">01</b><span>/07</span><em id="counterName">GLAMORGAN TOY DRIVE</em>
+</div>
+
+<main>
+
+<!-- ============ SLIDE 1 · HERO ============ -->
+<section class="slide slide-hero" id="s1" data-name="GLAMORGAN TOY DRIVE">
+  <div class="frame">
+
+    <div class="hero-toys" aria-hidden="true">
+      <span class="toy-photo" data-depth="26" style="--x:4%;  --y:16%; --s:64px; --dur:7s;  --del:0s"><img src="assets/toy-lego-bricks.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="14" style="--x:88%; --y:12%; --s:70px; --dur:8s;  --del:.6s"><img src="assets/toy-hot-wheels.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="34" style="--x:7%;  --y:66%; --s:76px; --dur:9s;  --del:.2s"><img src="assets/toy-plush-bears.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="18" style="--x:90%; --y:60%; --s:72px; --dur:7.5s;--del:1s"><img src="assets/toy-train.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="40" style="--x:16%; --y:38%; --s:52px; --dur:6.5s;--del:.4s"><img src="assets/toy-balls.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="22" style="--x:82%; --y:34%; --s:58px; --dur:8.5s;--del:.1s"><img src="assets/toy-star-wars-figure.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="30" style="--x:47%; --y:78%; --s:56px; --dur:7.8s;--del:.8s"><img src="assets/toy-puzzle.jpg" alt=""></span>
+      <span class="toy-photo" data-depth="12" style="--x:66%; --y:82%; --s:46px; --dur:9s;  --del:.3s"><img src="assets/toy-board-game.jpg" alt=""></span>
+      <img class="brick bl-1" data-depth="20" src="assets/toy-lego-bricks.jpg" alt="" style="--x:2%; --y:44%; --rot:-14deg">
+      <img class="brick bl-2" data-depth="30" src="assets/toy-lego-bricks.jpg" alt="" style="--x:93%; --y:76%; --rot:12deg">
+      <img class="brick bl-3" data-depth="16" src="assets/toy-lego-bricks.jpg" alt="" style="--x:30%; --y:88%; --rot:6deg">
+    </div>
+
+    <div class="hero-school reveal">
+      <span class="hero-school-pin" aria-hidden="true"><span class="pin-mark"></span></span>
+      <div>
+        <b>GLAMORGAN SCHOOL</b>
+        <small>The toy donation bin is located at the school.</small>
+      </div>
+    </div>
+
+    <h1 data-blocks="xl" class="hero-title">GLAMORGAN TOY DRIVE</h1>
+
+    <p class="hero-sub reveal" style="--d:.25s">A Grade 8 project to make donating toys easy and spread kindness.</p>
+
+    <div class="hero-ctas reveal" style="--d:.4s">
+      <a class="btn btn-red" href="#s3">HOW DO I HELP?</a>
+      <a class="btn btn-ghost" href="#s5">MEET THE TEAM →</a>
+    </div>
+
+    <p class="scroll-cue" aria-hidden="true"><span>▼</span> Scroll through the presentation</p>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>1 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 2 · WHY ============ -->
+<section class="slide slide-why" id="s2" data-name="WHY ARE WE DOING THIS?">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 2</span>
+
+    <div class="slide-toy-art why-toy-art" aria-hidden="true">
+      <span class="toy-sticker sticker-ball"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+      <span class="toy-sticker sticker-blocks"><img class="toy-photo-image" src="assets/toy-lego-bricks.jpg" alt=""></span>
+      <span class="toy-spark spark-a">✦</span><span class="toy-spark spark-b">✧</span>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-copy">
+        <h2 data-blocks="lg">WHY ARE WE DOING THIS?</h2>
+        <p class="lead reveal" style="--d:.1s">
+          We are four Grade 8 students at Glamorgan School, working together on a toy-drive project for our community.
+        </p>
+        <p class="reveal" style="--d:.22s">
+          We chose this project because sharing toys is a simple way to bring people together, spread kindness, and help kids enjoy play. Our team plans and promotes the drive, and our school community can take part by bringing a toy to the collection bin.
+        </p>
+        <h3 class="mission-heading reveal" style="--d:.28s">OUR MISSION</h3>
+        <p class="reveal" style="--d:.3s">
+          Make it easy for our school community to donate toys and help more kids experience fun, creative play.
+        </p>
+        <p class="project-context reveal" style="--d:.34s">This website is one part of our Grade 8 project: it explains the toy drive and shows everyone how to take part.</p>
+        <div class="chips reveal" style="--d:.38s">
+          <span class="chip">Four Grade 8 students</span>
+          <span class="chip">One toy can make a difference</span>
+          <span class="chip">Powered by kindness</span>
+        </div>
+      </div>
+
+      <div class="why-art reveal" style="--d:.2s" aria-hidden="true">
+        <div class="toybox">
+          <div class="pop-toys">
+            <span style="--x:-90px; --d:.0s"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+            <span style="--x:-34px; --d:.7s"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt=""></span>
+            <span style="--x:26px;  --d:1.3s"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt=""></span>
+            <span style="--x:86px;  --d:.4s"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+            <span style="--x:-140px;--d:1.8s"><img class="toy-photo-image" src="assets/toy-board-game.jpg" alt=""></span>
+            <span style="--x:140px; --d:2.4s"><img class="toy-photo-image" src="assets/toy-action-figures.jpg" alt=""></span>
+          </div>
+          <div class="box-lid lid-l"></div>
+          <div class="box-lid lid-r"></div>
+          <div class="box-body">
+            <span class="box-label">TOY&nbsp;BOX</span>
+            <span class="box-star">★</span>
+          </div>
+        </div>
+        <p class="art-caption">Overflowing with awesome →</p>
+      </div>
+    </div>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>2 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 3 · HOW ============ -->
+<section class="slide slide-how" id="s3" data-name="HOW DO I HELP?">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 3</span>
+
+    <h2 data-blocks="lg" class="center">HOW DOES THE TOY DRIVE WORK?</h2>
+    <p class="section-sub project-flow-intro reveal">Our project has two parts: our team plans and shares the drive, then the school community brings toys to the collection bin.</p>
+
+    <div class="slide-toy-art how-toy-art" aria-hidden="true">
+      <span class="toy-sticker how-car"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt=""></span>        <span class="toy-sticker how-rocket"><img class="toy-photo-image" src="assets/toy-action-figures.jpg" alt=""></span>
+      <span class="toy-spark spark-c">✦</span>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal" style="--d:.05s">
+        <span class="step-num" style="--c:#ff5964; --cd:#d63b47">1</span>
+        <h3 data-blocks="sm">PICK A TOY</h3>
+        <p>Choose a toy in good condition that another kid would be happy to play with.</p>
+      </li>
+      <li class="step reveal" style="--d:.18s">
+        <span class="step-num" style="--c:#4ea8ff; --cd:#2f7ed0">2</span>
+        <h3 data-blocks="sm">BRING IT TO GLAMORGAN SCHOOL</h3>
+        <p>Bring your toy to Glamorgan School. The collection bin is in front of the school office.</p>
+      </li>
+      <li class="step reveal" style="--d:.31s">
+        <span class="step-num" style="--c:#6bd97b; --cd:#3fae57">3</span>
+        <h3 data-blocks="sm">DROP IT IN THE BIN</h3>
+        <p>Place it in the bin. Our Grade 8 team plans and helps run the toy-drive project.</p>
+      </li>
+    </ol>
+
+    <div class="bin-scene reveal" style="--d:.2s">
+      <div class="bin-sign" aria-hidden="true">
+        <span class="post post-l"></span>
+        <span class="post post-r"></span>
+        <strong>DROP YOUR TOY HERE!</strong>
+      </div>
+
+      <div class="drop-toys" aria-hidden="true">
+        <span style="--x:-70px; --d:0s"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+        <span style="--x:60px;  --d:1.1s"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt=""></span>
+        <span style="--x:-10px; --d:2.2s"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+        <span style="--x:110px; --d:3.3s"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt=""></span>
+        <span style="--x:-120px;--d:4.4s"><img class="toy-photo-image" src="assets/toy-board-game.jpg" alt=""></span>
+      </div>
+
+      <div class="bin" aria-hidden="true">
+        <span class="bin-slot"></span>
+        <span class="bin-label">DONATION BIN</span>
+        <span class="bin-heart">♥</span>
+      </div>
+
+      <p class="bin-loc"><span class="pin-mark" aria-hidden="true"></span><b>Donation bin in front of the school office.</b></p>
+      <p class="bin-hint">Not sure what to bring? Peek at the next slide →</p>
+    </div>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>3 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 4 · TOYS ============ -->
+<section class="slide slide-toys" id="s4" data-name="WHAT TOYS DO WE LOVE?">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 4</span>
+
+    <h2 data-blocks="lg" class="center">WHAT TOYS DO WE LOVE?</h2>
+    <p class="section-sub reveal">All of them! But if you want ideas, our shelves are stocked with these:</p>
+
+    <div class="slide-toy-art shelves-toy-art" aria-hidden="true">
+      <span class="toy-sticker shelf-ball"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+      <span class="toy-sticker shelf-doll"><img class="toy-photo-image" src="assets/toy-doll.jpg" alt=""></span>
+      <span class="toy-spark spark-d">✧</span>
+    </div>
+
+    <div class="shelves reveal" style="--d:.15s">
+      <div class="shelf-row">
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt="Hot Wheels toy car"></span><h4>HOT WHEELS / TOY CARS</h4><p>Zoom, race, repeat</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-lego-bricks.jpg" alt="Colorful LEGO building bricks"></span><h4>LEGO® BUILDING BRICKS</h4><p>Stack something huge</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt="Collection of stuffed teddy bears"></span><h4>STUFFED ANIMALS</h4><p>Super cuddly friends</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-star-wars-figure.jpg" alt="Han Solo Star Wars action figure"></span><h4>STAR WARS FIGURES</h4><p>Bring a hero along</p></article>
+        <span class="plank" aria-hidden="true"></span>
+      </div>
+      <div class="shelf-row">
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-doll.jpg" alt="Sindy fashion doll with accessories"></span><h4>DOLLS</h4><p>Friends for everyone</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt="Colorful toy balls"></span><h4>SPORTS TOYS</h4><p>Get out and play</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-board-game.jpg" alt="Board game pieces"></span><h4>BOARD GAMES</h4><p>Family game night</p></article>
+        <article class="toy-card"><span class="tc-photo"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt="Jigsaw puzzle in progress"></span><h4>PUZZLES</h4><p>Click, fit, done!</p></article>
+        <span class="plank" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>4 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 5 · TEAM ============ -->
+<section class="slide slide-team" id="s5" data-name="MEET THE TEAM">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 5</span>
+
+    <div class="team-toys" aria-hidden="true">
+      <span class="toy-sticker team-teddy"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+      <span class="toy-sticker team-puzzle"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt=""></span>
+      <span class="toy-spark spark-team-a">✦</span><span class="toy-spark spark-team-b">✧</span>
+    </div>
+
+    <h2 data-blocks="lg" class="center">MEET THE TEAM</h2>
+
+    <div class="team-intro reveal" style="--d:.12s">
+      <h3>THE PEOPLE BEHIND THE TOYS</h3>
+      <p>We are four Grade 8 students at Glamorgan School. Everyone helps with planning, and each person also takes the lead on a different part of the project.</p>
+    </div>
+
+    <div class="team-grid">
+      <figure class="team-card reveal" style="--d:.1s">
+        <div class="photo-wrap">
+          <img src="assets/team-aadidev-ben.png" alt="Aadidev and Ben, two students on the Glamorgan toy drive team" loading="lazy">
+          <span class="team-badge">THE TEAM</span>
+          <span class="card-num">01</span>
+          <div class="name-row"><span class="nm">AADIDEV</span><span class="nm">BEN</span></div>
+        </div>
+        <figcaption>Glamorgan School · Toy Drive Crew</figcaption>
+      </figure>
+
+      <figure class="team-card reveal" style="--d:.28s">
+        <div class="photo-wrap">
+          <img src="assets/team-vir-julian.png" alt="Vir and Julian, two students on the Glamorgan toy drive team" loading="lazy">
+          <span class="team-badge">THE TEAM</span>
+          <span class="card-num">02</span>
+          <div class="name-row"><span class="nm">VIR</span><span class="nm">JULIAN</span></div>
+        </div>
+        <figcaption>Glamorgan School · Toy Drive Crew</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="roles-heading">OUR ROLES</h3>
+    <div class="team-roles">
+      <article class="role-card reveal" style="--d:.08s">
+        <h4>AADIDEV</h4>
+        <p><b>Role:</b> Website creator, and involved in planning.</p>
+      </article>
+      <article class="role-card reveal" style="--d:.16s">
+        <h4>BEN</h4>
+        <p><b>Role:</b> Oversees everything and helps out everywhere.</p>
+        <p><b>Also:</b> Executes the project with Julian.</p>
+      </article>
+      <article class="role-card reveal" style="--d:.24s">
+        <h4>VIR</h4>
+        <p><b>Role:</b> Main idea contributor, and helped in planning.</p>
+      </article>
+      <article class="role-card reveal" style="--d:.32s">
+        <h4>JULIAN</h4>
+        <p><b>Role:</b> Executes the project with Ben.</p>
+      </article>
+    </div>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>5 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 6 · WHY / HOW / WHERE ============ -->
+<section class="slide slide-project" id="s6" data-name="WHY, HOW &amp; WHERE?">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 6</span>
+
+    <div class="slide-toy-art project-toy-art" aria-hidden="true">
+      <span class="toy-sticker project-train"><img class="toy-photo-image" src="assets/toy-train.jpg" alt=""></span>
+      <span class="toy-sticker project-bear"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+      <span class="toy-spark spark-g">✦</span><span class="toy-spark spark-h">✧</span>
+    </div>
+
+    <h2 data-blocks="lg" class="center">WHY, HOW &amp; WHERE?</h2>
+    <p class="section-sub reveal">Our Grade 8 project in three quick answers — and where every toy ends up.</p>
+
+    <div class="project-grid">
+      <article class="pj-card pj-why reveal" style="--d:.1s">
+        <span class="pj-tag">WHY</span>
+        <h3 data-blocks="sm">WHY WE MADE THIS SLIDE</h3>
+        <p>This presentation is part of our Grade 8 project. We made it to explain the toy drive, share our mission, and show our school exactly how to take part.</p>
+      </article>
+      <article class="pj-card pj-how reveal" style="--d:.22s">
+        <span class="pj-tag">HOW</span>
+        <h3 data-blocks="sm">HOW WE DO IT</h3>
+        <p>We plan together, build this website, and promote the drive around school — then collect, sort, and count every toy that lands in the bin.</p>
+      </article>
+      <article class="pj-card pj-where reveal" style="--d:.34s">
+        <span class="pj-tag">WHERE</span>
+        <h3 data-blocks="sm">WHERE EVERYTHING GOES</h3>
+        <p>The toys leave our office in boxes and head to the Calgary Firefighters Toy Association, a volunteer group giving toys to Calgary kids since the 1940s.</p>
+      </article>
+    </div>
+
+    <div class="journey reveal" style="--d:.44s">
+      <div class="j-stop"><span class="j-ico">1</span><b>GLAMORGAN SCHOOL</b><small>New, unwrapped toys drop into the bin by the office</small></div>
+      <span class="j-arrow" aria-hidden="true">→</span>
+      <div class="j-stop"><span class="j-ico">2</span><b>TOY ASSOCIATION</b><small>Volunteers collect and sort the toys</small></div>
+      <span class="j-arrow" aria-hidden="true">→</span>
+      <div class="j-stop"><span class="j-ico">3</span><b>CHRISTMAS PARTY</b><small>Kids referred by local charities get a gift from Santa</small></div>
+    </div>
+
+    <p class="journey-note reveal">Can't make it to our bin? The association also accepts new, unwrapped toys at Chinook Centre — upper level, across from Anthropologie.</p>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>6 / 7</span></div>
+  </div>
+</section>
+
+<!-- ============ SLIDE 7 · FINAL CTA ============ -->
+<section class="slide slide-final" id="s7" data-name="LET'S FILL THE BIN!">
+  <div class="frame">
+    <span class="slide-tab">SLIDE 7</span>
+
+    <div class="final-toys" aria-hidden="true">
+      <span class="toy-sticker final-car"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt=""></span>
+      <span class="toy-sticker final-ball"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+      <span class="toy-sticker final-teddy"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+      <span class="toy-spark spark-final-a">✦</span><span class="toy-spark spark-final-b">✧</span>
+    </div>
+
+    <h2 data-blocks="xl" class="center">LET'S FILL THE BIN!</h2>
+    <p class="final-sub reveal" style="--d:.15s">
+      Bring a toy to the donation bin in front of the Glamorgan School office.
+    </p>
+
+    <div class="final-bin reveal" style="--d:.25s">
+      <div class="drop-toys big" aria-hidden="true">
+        <span style="--x:-80px; --d:0s"><img class="toy-photo-image" src="assets/toy-plush-bears.jpg" alt=""></span>
+        <span style="--x:70px;  --d:1.4s"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+        <span style="--x:0px;   --d:2.8s"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt=""></span>
+      </div>
+      <div class="bin giant" id="finalBin" aria-hidden="true">
+        <span class="bin-slot"></span>
+        <span class="bin-label">DONATION BIN</span>
+        <span class="bin-heart">♥</span>
+      </div>
+      <div class="bin-surround" aria-hidden="true">
+        <span class="toy-sticker"><img class="toy-photo-image" src="assets/toy-hot-wheels.jpg" alt=""></span>
+        <span class="toy-sticker"><img class="toy-photo-image" src="assets/toy-board-game.jpg" alt=""></span>
+        <span class="toy-sticker"><img class="toy-photo-image" src="assets/toy-puzzle.jpg" alt=""></span>
+        <span class="toy-sticker"><img class="toy-photo-image" src="assets/toy-balls.jpg" alt=""></span>
+      </div>
+    </div>
+
+    <button class="btn btn-red btn-bring" id="bringBtn" type="button">BRING A TOY</button>
+    <p class="pledge" id="pledgeCount">0 toys pledged by visitors so far</p>
+    <p class="pledge-hint">Click to drop one in (then really bring it to the bin!)</p>
+
+    <div class="slide-foot" aria-hidden="true"><span>Glamorgan Toy Drive</span><span>7 / 7</span></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <h2 data-blocks="sm" class="center">GLAMORGAN SCHOOL TOY DRIVE</h2>
+  <p class="footer-tag">Made by students, powered by kindness.</p>
+  <a class="btn btn-yellow" href="https://cfdtoyassoc.org/" target="_blank" rel="noopener">Calgary Toy Association →</a>
+  <p class="footer-fine">
+    The toy donation bin is located at Glamorgan School. This page shares
+    information about a student-organized toy drive. Toy photographs are credited
+    in <a href="assets/TOY-IMAGE-CREDITS.txt">image credits</a>.
+  </p>
+  <div class="bug-report">
+    <button class="btn btn-ghost bug-report-btn" id="reportBugBtn" type="button" aria-expanded="false" aria-controls="bugReportContact">REPORT A BUG</button>
+    <div class="bug-report-contact" id="bugReportContact" hidden>
+      <p>Found a problem? Email us and tell us what happened.</p>
+      <a href="mailto:drjessome@educbe.ca?subject=Glamorgan%20Toy%20Drive%20website%20bug">drjessome@educbe.ca</a>
+    </div>
+  </div>
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">▲ Top</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
